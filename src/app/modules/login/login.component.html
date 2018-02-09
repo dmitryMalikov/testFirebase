@@ -1,0 +1,20 @@
+<mat-card class="example-card" *ngIf="signInForm">
+	<form [formGroup]="signInForm" (ngSubmit)="signInUser()">
+		<mat-card-content>
+			<mat-form-field>
+				<input type="text"
+							 matInput
+							 placeholder="Input"
+							 [formControl]="signInForm.controls.username">
+			</mat-form-field>
+			<mat-form-field>
+				<input
+					type="password"
+					matInput
+					placeholder="Input"
+					[formControl]="signInForm.controls.password">
+			</mat-form-field>
+			<button mat-raised-button color="primary">Login</button>
+		</mat-card-content>
+	</form>
+</mat-card>
